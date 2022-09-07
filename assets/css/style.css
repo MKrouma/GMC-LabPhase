@@ -423,23 +423,9 @@ button{
     align-items: center;
 }
 
-.hm-btn-contact{
-    height: 46px;
-    width: 140px;
-    size: 20px;
-
-    border-radius: 8px;
-    border-color: var(--others-purple);
-    border: none;
-
+.abt-btn-download a{
+    size: 50px;
     color: white;
-    background-color: var(--others-purple);
-
-    margin-top: 2.5em;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .abt-btn-download i{
