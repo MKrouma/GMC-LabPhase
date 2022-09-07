@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;700&display=swap');
 
 /* GENERAL */
 *{
@@ -8,14 +8,139 @@
 }
 
 :root{
-    --violet-color : #806FE3;
-    --gray-own : #f8f9fa;
-    --gray-dark : #7C7894;
-    --gray-mid : #CCCCCC;
+    --background-white : #FAFAFD;
+    --title-black : #24222A;
+    --text-gray : #D8D7DE;
+    --others-purple : #6C55E0;
 }
 
 body{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 17px;
-    margin-top: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--background-white);
+}
+
+p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+a, a:visited, a:hover, a:active{
+    text-decoration: none;
+}
+
+.container {
+    margin: 1rem 150px 1rem 150px;
+}
+
+
+/* NAV BAR */
+/* .nav-bar, .nav-bar-left, .nav-bar-right, .name{
+    border: 1px solid red;
+} */
+
+.nav-bar{
+    height: 50px;
+
+    font-weight: 500;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-bar-left{
+    height: 100%;
+    width: 40%;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.name {
+    height: 80%;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.nav-bar-right{
+    height: 100%;
+    width: 60%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-features:hover{
+    color : var(--others-purple);
+}
+
+.nav-feature i{
+    transform: rotate(-30deg);
+}
+
+
+/* ABOUT  */
+.about, .about-left, .about-right, .abt-left-media, .abt-left-presentation,
+.medias{
+    border: 1px solid red;
+}
+.about{
+    height: 400px;
+    width: 100%;
+
+    margin-top: 5em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* about left */
+.about-left{
+    height: 100%;
+    width: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.abt-left-media{
+    height: 50%;
+    width: 15%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.medias{
+    height: 40px;
+    width: 40px;
+
+    color: var(--others-purple);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.abt-left-presentation{
+    height: 100%;
+    width: 85%;
+}
+
+/* about right */
+.about-right{
+    height: 100%;
+    width: 50%;
 }
