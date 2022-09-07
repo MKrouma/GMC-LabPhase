@@ -11,6 +11,7 @@
     --background-white : #FAFAFD;
     --title-black : #24222A;
     --text-gray : #D8D7DE;
+    --text-gray-weight : #AFAEB7;
     --others-purple : #6C55E0;
 }
 
@@ -20,6 +21,7 @@ body{
     width: 100%;
     height: 100%;
 
+    color: var(--title-black);
     background-color: var(--background-white);
 }
 
@@ -28,7 +30,8 @@ p{
     font-size: 15px;
 }
 
-a, a:visited, a:hover, a:active{
+a{
+    color: var(--title-black);
     text-decoration: none;
 }
 
@@ -78,7 +81,7 @@ a, a:visited, a:hover, a:active{
     align-items: center;
 }
 
-.nav-features:hover{
+.nav-features a:hover{
     color : var(--others-purple);
 }
 
@@ -88,12 +91,12 @@ a, a:visited, a:hover, a:active{
 
 
 /* ABOUT  */
-.about, .about-left, .about-right, .abt-left-media, .abt-left-presentation,
+/* .about, .about-left, .about-right, .abt-left-media, .abt-left-presentation,
 .medias{
     border: 1px solid red;
-}
+} */
 .about{
-    height: 400px;
+    height: 300px;
     width: 100%;
 
     margin-top: 5em;
@@ -127,16 +130,71 @@ a, a:visited, a:hover, a:active{
     height: 40px;
     width: 40px;
 
-    color: var(--others-purple);
-
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.medias a{
+    color: var(--others-purple);
+}
+
+/* .abt-left-presentation, .job-position, .abt-btn-contact{
+    border: 1px solid red;
+} */
+
 .abt-left-presentation{
     height: 100%;
     width: 85%;
+
+    padding-left: 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+h1{
+    size: 20px;
+    font-weight: 700;
+}
+
+.job-position {
+    color: var(--text-gray-weight);
+    size: 19px;
+    margin-top: 1em;
+}
+
+.job-description {
+    color: var(--text-gray);
+    size: 15px;
+    width: 80%;
+    margin-top: 1em;
+}
+
+.abt-btn-contact{
+    height: 46px;
+    width: 140px;
+    size: 20px;
+
+    border-radius: 8px;
+    border-color: var(--others-purple);
+    border: none;
+
+    color: white;
+    background-color: var(--others-purple);
+
+    margin-top: 2.5em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.abt-btn-contact i{
+    color: white;
+    padding-left: 0.5em;
 }
 
 /* about right */

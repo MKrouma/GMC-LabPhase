@@ -5,6 +5,7 @@ Style, color, font, icons etc.
 ```
 --background-white : #FAFAFD
 --title-black : #24222A
+--text-gray-weight : #AFAEB7
 --text-gray : #D8D7DE
 --others-purple : #6C55E0
 ```
