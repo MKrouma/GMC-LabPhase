@@ -25,6 +25,16 @@ body{
     background-color: var(--background-white);
 }
 
+h1{
+    font-size: 35px;
+    font-weight: 700;
+}
+
+h2{
+    font-size: 25px;
+    font-weight: 700;
+}
+
 p{
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
@@ -36,7 +46,7 @@ a{
 }
 
 .container {
-    margin: 1rem 150px 1rem 150px;
+    margin: 1rem 200px 1rem 200px;
 }
 
 
@@ -89,13 +99,16 @@ a{
     transform: rotate(-30deg);
 }
 
+#home-init a{
+    color: var(--others-purple);
+}
 
-/* ABOUT  */
-/* .about, .about-left, .about-right, .abt-left-media, .abt-left-presentation,
+/* HOME  */
+/* .home, .home-left, .home-right, .hm-left-media, .hm-left-presentation,
 .medias{
     border: 1px solid red;
 } */
-.about{
+.home{
     height: 300px;
     width: 100%;
 
@@ -107,7 +120,7 @@ a{
 }
 
 /* about left */
-.about-left{
+.home-left{
     height: 100%;
     width: 50%;
 
@@ -116,13 +129,13 @@ a{
     align-items: center;
 }
 
-.abt-left-media{
+.hm-left-media{
     height: 50%;
     width: 15%;
 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     justify-content: center;
 }
 
@@ -132,14 +145,14 @@ a{
 
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
 }
 
 .medias a{
     color: var(--others-purple);
 }
 
-.abt-left-presentation{
+.hm-left-presentation{
     height: 100%;
     width: 85%;
 
@@ -149,11 +162,6 @@ a{
     flex-direction: column;
     align-items: start;
     justify-content: center;
-}
-
-h1{
-    size: 20px;
-    font-weight: 700;
 }
 
 .job-position {
@@ -169,7 +177,7 @@ h1{
     margin-top: 1em;
 }
 
-.abt-btn-contact{
+.hm-btn-contact{
     height: 46px;
     width: 140px;
     size: 20px;
@@ -188,17 +196,17 @@ h1{
     align-items: center;
 }
 
-.abt-btn-contact i{
+.hm-btn-contact i{
     color: white;
     padding-left: 0.5em;
 }
 
-/* about right */
-/* .about-right, .abt-r-person-img{
+/* home right */
+/* .home-right, .hm-r-person-img{
     border: 1px solid red;
 } */
 
-.about-right{
+.home-right{
     height: 100%;
     width: 50%;
 
@@ -207,7 +215,7 @@ h1{
     align-items: center;
 }
 
-.abt-r-person-img{
+.hm-r-person-img{
     height: 100%;
     width: 70%;
 
@@ -219,6 +227,7 @@ h1{
 .image1{
     height: 100%;
     width: 100%;
+    color: var(--others-purple);
 
     position: relative;
     top: 0;
@@ -236,15 +245,15 @@ h1{
   }
 
 /* SCROLL DOWN */
-.scroll-down, .sd-empty, .sd-scroll{
+/* .scroll-down, .sd-empty, .sd-scroll{
     border: 1px solid red;
-}
+} */
 
 .scroll-down{
     height: 50px;
     width: 50%;
 
-    margin-top: 5em;
+    margin: 5em 0;
 
     display: flex;
     align-items: start;
@@ -268,10 +277,73 @@ h1{
 }
 
 .sd-scroll p{
-    margin: 0 0.5em;
+    margin: 0 0.7em;
     font-weight: 500;
 }
 
 .sd-scroll div i{
     color: var(--others-purple);
+}
+
+
+/* ABOUT */
+/* .about, .about-up, .about-down{
+    border: 1px solid red;
+} */
+
+.about{
+    height: 600px;
+    width: 100%;
+
+    padding: 3em 0;
+}
+
+.about-up{
+    height: 30%;
+    width: 100%;
+}
+
+.abt-up-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.abt-up-title p{
+    margin-top: 0.5em;
+    color: var(--text-gray-weight);
+}
+
+
+.about-down, .abt-down-left, .abt-down-right{
+    border: 1px solid red;
+}
+.about-down{
+    height: 70%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.abt-down-left{
+    height: 100%;
+    width: 50%;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.abt-down-left img{
+    height: 300px;
+    width: 350px;
+
+    border-radius: 5px;
+}
+
+.abt-down-right{
+    height: 100%;
+    width: 50%;
 }
