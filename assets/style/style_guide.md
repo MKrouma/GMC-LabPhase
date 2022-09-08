@@ -8,6 +8,7 @@ Style, color, font, icons etc.
 --text-gray-weight : #AFAEB7
 --text-gray : #D8D7DE
 --others-purple : #6C55E0
+--purple-light : #C4BAF8
 ```
 
 ## Font
