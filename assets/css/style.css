@@ -493,6 +493,8 @@ i{
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+
+    margin-top: 2em;
 }
 
 .sk-d-frames{
@@ -700,7 +702,7 @@ i{
     height: 500px;
     width: 100%;
 
-    margin-top: 3.5em;
+    margin-top: 5em;
 
     display: flex;
     flex-direction: column;
@@ -746,9 +748,20 @@ i{
 
 .q-d-t-type h3{
     margin-left: 1em;
-    color: var(--others-purple);
+    /* color: var(--others-purple); */
 }
 
+.q-d-t-type i{
+    color: var(--text-gray-weight);
+}
+
+.education{
+    color: var(--others-purple)
+}
+
+.education i{
+    color: var(--others-purple)
+}
 
 
 .q-d-description{
