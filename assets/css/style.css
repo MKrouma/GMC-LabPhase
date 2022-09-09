@@ -112,6 +112,8 @@ i{
     display: flex;
     justify-content: start;
     align-items: center;
+
+    box-shadow: 0 0.5px 1px 0 rgba(0,0,0,.2);
 }
 
 .nav-bar-left{
@@ -165,7 +167,7 @@ i{
     height: 300px;
     width: 100%;
 
-    margin-top: 5em;
+    margin-top: 7em;
 
     display: flex;
     justify-content: center;
@@ -219,13 +221,14 @@ i{
 
 .job-position {
     color: var(--text-gray-weight);
-    size: 19px;
+    size: 22px;
     margin-top: 1em;
+    font-weight: 600;
 }
 
 .job-description {
-    color: var(--text-gray);
-    size: 15px;
+    color: var(--text-gray-weight);
+    size: 14px;
     width: 80%;
     margin-top: 1em;
 }
@@ -257,9 +260,9 @@ i{
     height: 100%;
     width: 70%;
 
-    position: relative;
+    /* position: relative;
     top: 0;
-    left: 0;
+    left: 0; */
 }
 
 .image1{
@@ -267,9 +270,9 @@ i{
     width: 100%;
     color: var(--others-purple);
 
-    position: relative;
+    /* position: relative;
     top: 0;
-    left: 0;
+    left: 0; */
 }
 
 .image2 {
