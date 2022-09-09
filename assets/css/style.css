@@ -152,7 +152,22 @@ i{
 .nav-feature i{
     transform: rotate(-30deg);
     color: black;
+
+    display: flex;
+    align-items: center;
+    justify-content: end;
 }
+
+.btn-night-mode{
+    background-color: var(--background-white);
+    cursor: pointer;
+    width: 2em;
+    height: 100%;
+}
+
+
+
+/* HOME  */
 
 #home-init a{
     color: var(--others-purple);
