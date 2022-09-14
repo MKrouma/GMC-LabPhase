@@ -30,11 +30,17 @@ function nightMode(event) {
     document.getElementsByTagName("body")[0].style.backgroundColor = `#FAFAFD`;
     document.getElementsByTagName("body")[0].style.color = `#24222A`;
 
+    // link 
     const aTagELements = document.getElementsByTagName("a")
     for (let aTagELement of aTagELements) {
       aTagELement.style.color = `#24222A`;
     }
 
+    // // button 
+    const btnTagELements = document.getElementsByClassName("abt-btn-download")
+    for (let btnTagELement of btnTagELements) {
+      btnTagELement.getElementsByTagName("a")[0].style.color = `white`;
+    }
     
     document.querySelector(".nav-bar").style.backgroundColor = `#FAFAFD`;
     document.querySelector(".project-footer").style.backgroundColor = `#6C55E0`;
@@ -125,6 +131,94 @@ function skillsUpDown(event) {
   }
 }
 
+function qualificationMode(event) {
+  const target = event.currentTarget;
+  const qualifiDescriptionParent = target.parentNode.parentNode
+  console.log('The target to up or down is:', qualifiDescriptionParent);
+
+  workOrEducation = target.getAttribute("class")
+  console.log("Class log", workOrEducation)
+
+  if (workOrEducation.includes("work")) {
+    // new description 
+    const quali_descr = `
+      <div class="q-d-title">
+        <div class="q-d-t-type education">
+            <i class="fa-solid fa-graduation-cap fa-xl"></i>
+            <h3>Education</h3>
+        </div>
+        <div class="q-d-t-type work">
+            <i class="fa-solid fa-briefcase fa-xl"></i>
+            <h3>Work</h3>
+        </div>
+      </div>
+      <div class="q-d-description">
+      <div class="qdd-text qdd-text-l">
+          <p class="qdd-text-title">Geospatial Specialist</p>
+          <p class="qdd-text-school">Satelligence</p>
+          <p class="qdd-text-period"><i class="fa-regular fa-calendar"></i>2/2021-Present</p>
+      </div>
+      <div class="qdd-text qdd-text-r"></div>
+      <div class="qdd-text qdd-text-l"></div>
+      <div class="qdd-text qdd-text-r">
+          <p class="qdd-text-title">Remote sensing & ML Developer</p>
+          <p class="qdd-text-school">Spacesense.ai</p>
+          <p class="qdd-text-period"><i class="fa-regular fa-calendar"></i>7/2020-12/2020</p>
+      </div>
+    </div>
+    `
+    qualifiDescriptionParent.innerHTML = quali_descr
+
+    // change style 
+    // console.log("Education", document.getElementsByClassName("education"))
+    document.getElementsByClassName("education")[0].style.color = "black";
+    document.getElementsByClassName("education")[0].getElementsByTagName("i")[0].style.color = "#AFAEB7";
+    document.getElementsByClassName("work")[0].style.color = "#6C55E0";
+    document.getElementsByClassName("work")[0].getElementsByTagName("i")[0].style.color = "#6C55E0";
+
+    console.log('The target to up or down is AFTER:', qualifiDescriptionParent);
+  } 
+
+  if (workOrEducation.includes("education")) {
+    // new description 
+    const quali_descr = `
+        <div class="q-d-title">
+          <div class="q-d-t-type education">
+              <i class="fa-solid fa-graduation-cap fa-xl"></i>
+              <h3>Education</h3>
+          </div>
+          <div class="q-d-t-type work">
+              <i class="fa-solid fa-briefcase fa-xl"></i>
+              <h3>Work</h3>
+          </div>
+        </div>
+        <div class="q-d-description">
+          <div class="qdd-text qdd-text-l">
+              <p class="qdd-text-title">Mastère spécialisé PPMD</p>
+              <p class="qdd-text-school">Ecole Nationale des Sciences Geographiques</p>
+              <p class="qdd-text-period"><i class="fa-regular fa-calendar"></i>2019-2020</p>
+          </div>
+          <div class="qdd-text qdd-text-r"></div>
+          <div class="qdd-text qdd-text-l"></div>
+          <div class="qdd-text qdd-text-r">
+              <p class="qdd-text-title">Ingénieur Géomètre-T.</p>
+              <p class="qdd-text-school">Insitut National Polytechnique Félix Houphouet Boigny</p>
+              <p class="qdd-text-period"><i class="fa-regular fa-calendar"></i>2014-2019</p>
+          </div>
+        </div>
+    `
+    qualifiDescriptionParent.innerHTML = quali_descr
+
+    // change style 
+    // console.log("Education", document.getElementsByClassName("education"))
+    document.getElementsByClassName("education")[0].style.color = "#6C55E0";
+    document.getElementsByClassName("education")[0].getElementsByTagName("i")[0].style.color = "#6C55E0";
+    document.getElementsByClassName("work")[0].style.color = "black";
+    document.getElementsByClassName("work")[0].getElementsByTagName("i")[0].style.color = "#AFAEB7";
+
+    console.log('The target to up or down is AFTER:', qualifiDescriptionParent);
+  }
+}
 
 
 // LISTENERS 
@@ -133,7 +227,7 @@ function upDownSkillListeners() {
 
   for (let upDownBtnElement of upDownBtnElementAll) {
     upDownBtnElement.addEventListener('click', skillsUpDown);
-    console.log("Up or Down Skills", upDownBtnElement);
+    // console.log("Up or Down Skills", upDownBtnElement);
   }
 }
 
@@ -145,7 +239,17 @@ function nightModeListerner() {
 }
 
 
+function qualificationModeListerner() {
+  const qualiBtnElementAll = document.getElementsByClassName('q-d-t-type');
+
+  for (let qualiBtnElement of qualiBtnElementAll) {
+    qualiBtnElement.addEventListener('click', qualificationMode);
+    // console.log("Qualification Education/Work", qualiBtnElement);
+  }
+}
+
 
 // RUN LISTENERS 
 upDownSkillListeners()
 nightModeListerner()
+qualificationModeListerner()

@@ -800,8 +800,10 @@ i{
     align-items: center;
 }
 
+
 .q-d-t-type h3{
     margin-left: 1em;
+    cursor: pointer;
     /* color: var(--others-purple); */
 }
 
@@ -1003,12 +1005,12 @@ i{
 
 
 #ha-name{
-    width: 40%;
+    width: 47%;
     height: 60px;
 }
 
 #ha-email{
-    width: 40%;
+    width: 48%;
     height: 60px;
     margin-left: 1em;
 }
