@@ -36,7 +36,6 @@ function nightMode(event) {
     }
 
     
-  
     document.querySelector(".nav-bar").style.backgroundColor = `#FAFAFD`;
     document.querySelector(".project-footer").style.backgroundColor = `#6C55E0`;
 
