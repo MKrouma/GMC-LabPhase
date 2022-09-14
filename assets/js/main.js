@@ -1,26 +1,38 @@
-// Night mode 
-// Hello 
-console.log('Hello world');
-const paragraphs = document.querySelectorAll("p");
-// paragraphs[0] is the first <p> element
-// paragraphs[1] is the second <p> element, etc.
-console.log(paragraphs[0].nodeName);
+var skilss_title = document.querySelector(".frames-title-description")
+console.log(skilss_title)
 
 
-// 1. Night mode
-function nightMode(event) {
-    const target = event.currentTarget;
-    const nightButton = document.getElementsByClassName('night-mode');
-    console.log('The target is:', target);
-  
-    // const currentRow = target.parentNode.parentNode.parentNode.parentNode.parentNode;
-    // console.log("The current row", currentRow)
-    // const tableElement = currentRow.parentNode;
-  
-    // tableElement.removeChild(currentRow);
-  
-    // addMinusPlusListeners();
-    // calculateAll();
+// FUNCTION 
+function skillsUpDown(event) {
+  const target = event.currentTarget;
+  console.log('The target to up or down is:', target);
+
+  // skilss parent level 
+  const skillsRow = target.parentNode.parentNode.parentNode;
+  console.log('Skills target parent:', skillsRow);
+
+  // change icon 
+  const framesIcon = skillsRow.querySelector(".ft-des-right")
+  framesIcon.innerHTML = `<i class="fa-solid fa-chevron-down fa-sm"></i>`
+
+  // delete frame-skills text 
+  const framesSkills = skillsRow.querySelector(".frames-skills")
+  framesSkills.innerText = ""
+}
+
+
+
+// LISTENERS 
+function upDownSkillListeners() {
+  const upDownBtnElementAll = document.getElementsByClassName('ft-des-right');
+
+  for (let upDownBtnElement of upDownBtnElementAll) {
+    upDownBtnElement.addEventListener('click', skillsUpDown);
+    console.log("Up or Down Skills", upDownBtnElement);
   }
+}
 
-  nightMode()
+
+
+// RUN LISTENERS 
+upDownSkillListeners()
