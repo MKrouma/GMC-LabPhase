@@ -8,6 +8,7 @@ function nightMode(event) {
   const nightOrNot = nightModeElement.getAttribute("id")
   console.log("Night mode element :", nightModeElement)
 
+  // NIGHT MODE 
   if (nightOrNot == "n-m-light") {
     document.getElementsByTagName("body")[0].style.backgroundColor = `#312244`;
     document.getElementsByTagName("body")[0].style.color = `#FAFAFD`;
@@ -26,6 +27,7 @@ function nightMode(event) {
     console.log("Night mode element AFTER:", nightModeElement)
   } 
   
+  // LIGHT MODE 
   else {
     document.getElementsByTagName("body")[0].style.backgroundColor = `#FAFAFD`;
     document.getElementsByTagName("body")[0].style.color = `#24222A`;
@@ -171,6 +173,14 @@ function qualificationMode(event) {
 
     // change style 
     // console.log("Education", document.getElementsByClassName("education"))
+    nightOrNot = document.getElementsByClassName("night-mode")[0].getAttribute("id")
+    console.log("Night mode for Quali : ", nightOrNot)
+    if (nightOrNot == "n-m-light") {
+      document.getElementsByClassName("education")[0].style.color = "black";
+    }
+    else {
+      document.getElementsByClassName("education")[0].children[1].style.color = "white";
+    }
     document.getElementsByClassName("education")[0].style.color = "black";
     document.getElementsByClassName("education")[0].getElementsByTagName("i")[0].style.color = "#AFAEB7";
     document.getElementsByClassName("work")[0].style.color = "#6C55E0";
