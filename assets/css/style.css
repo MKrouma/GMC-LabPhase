@@ -449,7 +449,7 @@ i{
 }
 
 .number-description{
-    width: 60%;
+    width: 80%;
     text-align: start;
     color: var(--text-gray-weight);
 }
