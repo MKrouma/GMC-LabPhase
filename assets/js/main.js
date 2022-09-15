@@ -60,60 +60,9 @@ function skillsUpDown(event) {
   // skilss parent level 
   const skillsRow = target.parentNode.parentNode.parentNode;
   const framesSkills = skillsRow.querySelector(".frames-skills")
-  const frameSkillsOriginalHTML = `
-  <div class="frames-skills">
-      <div class="frames-skills-empty"></div>
-      <div class="frames-skills-enums">
-          <div class="frames-skills-enum">
-              <div class="f-s-e-up">
-                  <div>GIS</div>
-                  <div>82%</div>
-              </div>
-              <div class="f-s-e-down">
-                  <div class="progress-bar">
-                      <div class="pg pg-bar-GIS"></div>
-                  </div>
-              </div>
-          </div>
-          <div class="frames-skills-enum">
-              <div class="f-s-e-up">
-                  <div>Remote sensing</div>
-                  <div>80%</div>
-              </div>
-              <div class="f-s-e-down">
-                  <div class="progress-bar">
-                      <div class="pg pg-bar-RS"></div>
-                  </div>
-              </div>
-          </div>
-          <div class="frames-skills-enum">
-              <div class="f-s-e-up">
-                  <div>SAR</div>
-                  <div>70%</div>
-              </div>
-              <div class="f-s-e-down">
-                  <div class="progress-bar">
-                      <div class="pg pg-bar-SAR"></div>
-                  </div>
-              </div>
-          </div>
-          <div class="frames-skills-enum">
-              <div class="f-s-e-up">
-                  <div>Forestery/Agriculture</div>
-                  <div>55%</div>
-              </div>
-              <div class="f-s-e-down">
-                  <div class="progress-bar">
-                      <div class="pg pg-bar-FA"></div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  `
   console.log('Skills target parent:', skillsRow);
 
-  // change icon 
+  // change icon & skills 
   const framesIconParent = skillsRow.querySelector(".ft-des-right")
   const framesIconCLass = framesIconParent.getElementsByTagName("i")[0].getAttribute("class")
   console.log("Icon class attributes : ", framesIconCLass)
@@ -122,14 +71,100 @@ function skillsUpDown(event) {
     framesIconParent.innerHTML = `<i class="fa-solid fa-chevron-up fa-sm"></i>`
 
     // upload frameskills original HTML
-    framesSkills.innerHTML = frameSkillsOriginalHTML
+    framesSkills.style.display = "flex";
   } 
   
   else {
     framesIconParent.innerHTML = `<i class="fa-solid fa-chevron-down fa-sm"></i>`
 
     // delete frame-skills text 
-    framesSkills.innerHTML = ""
+    framesSkills.style.display = "None";
+  }
+
+  // reduce height 
+  const earthSkillsUp = document.querySelector("#earthO-skills").children[0].children[1].children[1].children[0].getAttribute("class")
+  const dataSSkillsUp = document.querySelector("#dataS-skills").children[0].children[1].children[1].children[0].getAttribute("class")
+  const webSkillsUp = document.querySelector("#webD-skills").children[0].children[1].children[1].children[0].getAttribute("class")
+  const dataESkillsUp = document.querySelector("#dataE-skills").children[0].children[1].children[1].children[0].getAttribute("class")
+  console.log("Earth skills :", dataSSkillsUp)
+  console.log("Earth skills :", dataSSkillsUp)
+
+  // group 1 & 2 var 
+  const skillsElement = document.querySelector(".skills")
+  const skillsDownElement = document.querySelector(".skills-down")
+  const groupe1DownALL = document.getElementsByClassName("sk-groupe1")
+  const groupe2DownALL = document.getElementsByClassName("sk-groupe2")
+
+  // GROUP 1
+  if (earthSkillsUp.includes("fa-chevron-down") && dataSSkillsUp.includes("fa-chevron-down")) {
+    // reduce skills down 
+    skillsElement.style.height = "500px"
+    skillsDownElement.style.height = "400px"
+
+    // reduce groupe 1
+    for (let groupe1Down of groupe1DownALL) {
+      groupe1Down.style.height = "50px";
+    }
+
+    for (let groupe2Down of groupe2DownALL) {
+      groupe2Down.style.height = "350px";
+    }
+  }
+
+  else {
+     // reduce skills down 
+     skillsElement.style.height = "750px"
+     skillsDownElement.style.height = "100%"
+ 
+     // reduce groupe 1
+     for (let groupe1Down of groupe1DownALL) {
+       groupe1Down.style.height = "50%";
+     }
+  }
+
+  // GROUP 2
+  if (webSkillsUp.includes("fa-chevron-down") && dataESkillsUp.includes("fa-chevron-down")) {
+    // reduce skills down 
+    skillsElement.style.height = "500px"
+    skillsDownElement.style.height = "400px"
+
+    // reduce groupe 2
+    for (let groupe1Down of groupe1DownALL) {
+      groupe1Down.style.height = "350px";
+    }
+
+    for (let groupe2Down of groupe2DownALL) {
+      groupe2Down.style.height = "50px";
+    }
+  }
+
+  else {
+     // reduce skills down 
+     skillsElement.style.height = "750px"
+     skillsDownElement.style.height = "100%"
+ 
+     // reduce groupe 2
+     for (let groupe2Down of groupe2DownALL) {
+      groupe2Down.style.height = "50%";
+     }
+  }
+
+  // ALL 
+  if (earthSkillsUp.includes("fa-chevron-down") && dataSSkillsUp.includes("fa-chevron-down")
+    && webSkillsUp.includes("fa-chevron-down") && dataESkillsUp.includes("fa-chevron-down")) 
+  {
+    // reduce skills down 
+    skillsElement.style.height = "300px"
+    skillsDownElement.style.height = "200px"
+
+    // reduce groupe 1
+    for (let groupe1Down of groupe1DownALL) {
+      groupe1Down.style.height = "50px";
+    }
+
+    for (let groupe2Down of groupe2DownALL) {
+      groupe2Down.style.height = "50px";
+    }
   }
 }
 
